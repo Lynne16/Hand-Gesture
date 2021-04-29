@@ -1,0 +1,40 @@
+body
+{
+  color: white;
+  background: #c772e0;
+}
+.heading{
+  font-size: 30px;
+  border-radius: 10px;
+  letter-spacing: 10px;
+}
+span
+{
+  font-size: 30px;
+}
+#camera , #result
+{
+  border: 2px dashed black;
+  width: 350px;
+  height: 300px; 
+}
+.gesture{
+  font-size: 48px;
+}
+label{
+  font-size: 20px;
+  color: green;
+  padding: 6px;
+  border-radius: 10px;
+  background-color: honeydew;
+}
+#lbl_predict{
+  font-size: 20px;
+  color: green;
+  padding: 6px;
+  border-radius: 10px;
+  background-color: honeydew;
+  margin-left: 100px;
+  width: 105px;
+  font-weight: bold;
+}
