@@ -38,3 +38,17 @@ label{
   width: 105px;
   font-weight: bold;
 }
+#result_gesture_name
+{
+  color: black;
+  margin-left: 100;
+}
+.gesture_name
+{
+  font-size: 40px;
+}
+.gesture
+{
+  font-size:48px;
+  margin-left: 100;
+}

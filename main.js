@@ -25,7 +25,34 @@ function modelLoaded(){
 var Prediction="";
 function speak(){
     var synth=window.speechSynthesis;
-    speak_data="The Prediction is"+Prediction;
+    speak_data="The Prediction is "+Prediction;
     var utterThis=new SpeechSynthesisUtterance(speak_data);
     synth.speak(utterThis);
+}
+
+function check(){
+    img=document.getElementById("captured_img");
+    classifier.classify(img, gotResult);
+}
+
+function gotResult(error, results){
+    if(error){
+        console.error(error);
+    }
+    else{
+        console.log(results);
+        document.getElementById("result_gesture_name").innerHTML=results[0].label;
+        Prediction =results[0].label;
+        speak();
+        if(Prediction == "amazing "){
+            document.getElementById("update_gesture").innerHTML="&#128076;";
+        }
+        if(Prediction == "best"){
+            document.getElementById("update_gesture").innerHTML="&#128077;";
+        }
+        if(Prediction == "victory "){
+            document.getElementById("update_gesture").innerHTML="&#9996;";
+        }
+
+}
 }
